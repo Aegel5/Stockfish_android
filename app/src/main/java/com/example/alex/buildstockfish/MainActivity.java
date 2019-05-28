@@ -22,23 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        //tv.setText(stringFromJNI());
-
-        try {
-            //ProcessBuilder pbuilder = new ProcessBuilder("stockfish_exe");
-            //Process p = pbuilder.start();
-
-            String path = getApplicationInfo().nativeLibraryDir + "/libnative-lib.so";
-            File f = new File(path);
-            Log.d("executeCommandLine", path);
-            Log.d("executeCommandLine", Boolean.toString(f.exists()));
-        }
-        catch (Exception e)
-        {
-            Log.d("executeCommandLine", e.toString());
-        }
     }
 
     /**
